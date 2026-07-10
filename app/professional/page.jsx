@@ -36,10 +36,10 @@ export default function ProfessionalJourney() {
         }
       ],
       bullets: [
-        "Developed complex Power BI dashboards processing over 1 million records monthly for engineering performance tracking.",
-        "Optimized data pipelines using SQL, reducing report generation time by 40%.",
-        "Collaborated with cross-functional teams to identify key performance indicators (KPIs) for multi-million dollar projects.",
-        "Implemented automated data validation scripts using Python to ensure data integrity across multiple platforms."
+        "Analysed workforce manhour allocation across multiple concurrent engineering projects, improving resource visibility and enabling data-driven project planning and headcount forecasting.",
+        "Developed an interactive resource-tracking model that aggregates multi-sheet engineering data to dynamically filter and display key metrics — project descriptions, document types, and position-specific manhour allocations — based on user-defined criteria.",
+        "Built interactive Power BI dashboards with custom DAX measures and automated reporting workflows, significantly reducing manual data processing while improving reporting accuracy and executive decision-making.",
+        "Recognised by management for delivering a solution that simplified complex manual workflows and improved resource planning and headcount visibility."
       ],
       tags: ["Engineering Operations", "Resource Modeling"]
     },
@@ -65,10 +65,10 @@ export default function ProfessionalJourney() {
         }
       ],
       bullets: [
-        "Analyzed market trends and competitor data to support strategic decision-making for chemical export divisions.",
-        "Streamlined internal reporting workflows using SAP and Excel Power Query, saving 15 hours of manual work weekly.",
-        "Presented business insights to senior management, contributing to the optimization of supply chain logistics.",
-        "Conducted requirement gathering sessions for digital transformation initiatives within the PETRONAS ecosystem."
+        "Delivered monthly analytics on 1M+ records and enhanced a 10-page Power BI dashboard serving 325+ users across 10 departments, consolidating multiple data sources through Power Query and DAX.",
+        "Analysed training-module completion across departments, surfacing learning-hour trends and underperformance against a 52-hour annual target while flagging anomalies and performance deviations.",
+        "Conducted On-Job Training (OJT) competency-gap mapping with department heads and Commercial Transformation, aligning 378 line items across 298 unique OJT tasks with current business needs.",
+        "Produced supporting documentation and process materials, demonstrating initiative across multiple professional-development workstreams."
       ],
       tags: ["Market Intelligence", "Power BI", "Capability Development"]
     }

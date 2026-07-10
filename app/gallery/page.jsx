@@ -13,38 +13,38 @@ export default function Gallery() {
   const photos = [
     {
       src: "/Img/BMW.jpg",
-      title: "Precision Velocity",
+      title: "German Engineering",
       category: "Automotive",
-      meta: "f/2.8 | 1/250s | ISO 100",
-      alt: "A high-contrast automotive photography shot of a sleek midnight-blue sports car captured at twilight."
+      meta: "f/4.0 | 1/250s | ISO 600",
+      alt: "Three machines, one passion."
     },
     {
       src: "/Img/2-DSC01305.jpg",
       title: "Neon Echoes",
       category: "Travel",
-      meta: "f/1.8 | 1/60s | ISO 1600",
-      alt: "A gritty urban street photograph featuring a rain-slicked alleyway in Tokyo at night."
+      meta: "f/4.0 | 1/160s | ISO 400",
+      alt: "Where design meets imagination."
     },
     {
       src: "/Img/DSC09390.jpg",
       title: "Solo Portrait",
       category: "Pre Convocation Portrait",
-      meta: "f/2.8 | 1/200s | ISO 200",
-      alt: "A striking studio portrait of a subject with dramatic side-lighting."
+      meta: "f/1.8 | 1/200s | ISO 200",
+      alt: "One step closer to the next chapter."
     },
     {
       src: "/Img/1-DSC02288.jpg",
       title: "Group Portrait",
       category: "Pre Convocation Portrait",
-      meta: "f/8.0 | 1/100s | ISO 200",
-      alt: "A vast landscape photograph of Icelandic black sand beaches under a heavy, moody sky."
+      meta: "f/4.0 | 1/200s | ISO 400",
+      alt: "Running towards memories and milestones."
     },
     {
       src: "/Img/DSC05003.jpg",
       title: "Group Portrait",
       category: "Pre Convocation Portrait",
       meta: "f/4.0 | 1/400s | ISO 200",
-      alt: "A close-up macro photograph of a vintage silver camera lens."
+      alt: "Collecting moments before the big day."
     },
     {
       src: "/Img/3-DSC02580.jpg",

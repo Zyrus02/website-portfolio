@@ -1,21 +1,56 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Phone, ExternalLink, Code2, Instagram, Camera, Send, Loader2, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Phone, ExternalLink, Code2, Instagram, Camera, Send, Loader2, CheckCircle2, X } from "lucide-react";
 
 export default function Contact() {
-  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | sending | success
+  const [submitStatus, setSubmitStatus] = useState("idle"); // idle | sending | success | error
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     setSubmitStatus("sending");
-    setTimeout(() => {
-      setSubmitStatus("success");
-      e.target.reset();
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    // Connects to Formspree endpoint (Formspree ID can be configured via Env Variable)
+    const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || "YOUR_FORMSPREE_ID";
+
+    if (formspreeId === "YOUR_FORMSPREE_ID") {
+      // Fallback mockup behavior if no Formspree ID is set yet
       setTimeout(() => {
-        setSubmitStatus("idle");
-      }, 3000);
-    }, 1500);
+        setSubmitStatus("success");
+        e.target.reset();
+        setTimeout(() => {
+          setSubmitStatus("idle");
+        }, 3000);
+      }, 1500);
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        e.target.reset();
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (err) {
+      setSubmitStatus("error");
+    }
+
+    setTimeout(() => {
+      setSubmitStatus("idle");
+    }, 4000);
   };
 
   const contactInfos = [
@@ -27,7 +62,7 @@ export default function Contact() {
   const socials = [
     { name: "LinkedIn", url: "https://linkedin.com/in/farhannuriman", icon: ExternalLink },
     { name: "GitHub", url: "https://github.com/Zyrus02", icon: Code2 },
-    { name: "Instagram", url: "#", icon: Code2 },
+    { name: "Instagram", url: "#", icon: Instagram },
     { name: "Unsplash", url: "#", icon: Camera }
   ];
 
@@ -98,6 +133,7 @@ export default function Contact() {
                 <label className="text-sm font-bold text-on-surface font-label">Full Name</label>
                 <input
                   required
+                  name="name"
                   className="bg-surface-container rounded-lg border-none focus:ring-2 focus:ring-secondary text-on-surface p-3 font-body text-sm"
                   placeholder="John Doe"
                   type="text"
@@ -107,6 +143,7 @@ export default function Contact() {
                 <label className="text-sm font-bold text-on-surface font-label">Email Address</label>
                 <input
                   required
+                  name="email"
                   className="bg-surface-container rounded-lg border-none focus:ring-2 focus:ring-secondary text-on-surface p-3 font-body text-sm"
                   placeholder="john@example.com"
                   type="email"
@@ -117,6 +154,7 @@ export default function Contact() {
               <label className="text-sm font-bold text-on-surface font-label">Subject</label>
               <input
                 required
+                name="subject"
                 className="bg-surface-container rounded-lg border-none focus:ring-2 focus:ring-secondary text-on-surface p-3 font-body text-sm"
                 placeholder="How can I help?"
                 type="text"
@@ -126,6 +164,7 @@ export default function Contact() {
               <label className="text-sm font-bold text-on-surface font-label">Message</label>
               <textarea
                 required
+                name="message"
                 className="bg-surface-container rounded-lg border-none focus:ring-2 focus:ring-secondary text-on-surface p-3 font-body text-sm"
                 placeholder="Your message here..."
                 rows={4}
@@ -136,6 +175,8 @@ export default function Contact() {
               className={`w-full text-on-secondary py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 submitStatus === "success"
                   ? "bg-tertiary"
+                  : submitStatus === "error"
+                  ? "bg-error text-on-error"
                   : "bg-secondary hover:brightness-110"
               }`}
               type="submit"
@@ -156,6 +197,12 @@ export default function Contact() {
                 <>
                   Sent Successfully!
                   <CheckCircle2 className="w-4 h-4" />
+                </>
+              )}
+              {submitStatus === "error" && (
+                <>
+                  Failed to Send
+                  <X className="w-4 h-4" />
                 </>
               )}
             </button>

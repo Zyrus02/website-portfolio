@@ -27,7 +27,7 @@ export default function Projects() {
       desc: "Focusing on low-latency data processing and robust architectural patterns across all engineering domains.",
       icon: "analytics",
       span: "col-span-12 md:col-span-6 lg:col-span-4",
-      bgColor: "bg-secondary text-on-secondary",
+      bgColor: "bg-surface text-primary",
     },
     {
       id: "web-portfolio",

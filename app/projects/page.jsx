@@ -27,7 +27,7 @@ export default function Projects() {
       desc: "Focusing on low-latency data processing and robust architectural patterns across all engineering domains.",
       icon: "analytics",
       span: "col-span-12 md:col-span-6 lg:col-span-4",
-      bgColor: "bg-secondary text-on-secondary"
+      bgColor: "bg-secondary text-on-secondary",
     },
     {
       id: "web-portfolio",
@@ -75,7 +75,7 @@ export default function Projects() {
             return (
               <div
                 key={proj.id}
-                className={`${proj.span} glass-card rounded-xl p-8 flex flex-col justify-center items-center text-center ${proj.bgColor}`}
+                className={`${proj.span} rounded-xl p-8 flex flex-col justify-center items-center text-center ${proj.bgColor} border border-outline-variant/20 hover:-translate-y-1 hover:shadow-lg transition-all duration-300`}
               >
                 {(() => {
                   const Icon = IconMap[proj.icon];

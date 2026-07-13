@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, LineChart, LayoutDashboard, BarChart3, Users } from "lucide-react";
+import { ChevronDown, LineChart, LayoutDashboard, BarChart3, Users, Download } from "lucide-react";
 
 const IconMap = {
   analytics: LineChart,
@@ -85,11 +85,21 @@ export default function ProfessionalJourney() {
   return (
     <main className="pt-32 pb-24 px-4 md:px-10 max-w-5xl mx-auto">
       {/* Header Section */}
-      <section className="mb-16 text-center">
-        <h1 className="font-headline text-headline-lg text-on-surface mb-4 font-black">Professional Journey</h1>
-        <p className="font-body text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-          A trajectory defined by precision, data-driven decision making, and strategic execution within the energy and chemicals sector.
-        </p>
+      <section className="mb-16 text-center flex flex-col items-center gap-6">
+        <div>
+          <h1 className="font-headline text-headline-lg text-on-surface mb-4 font-black">Professional Journey</h1>
+          <p className="font-body text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+            A trajectory defined by precision, data-driven decision making, and strategic execution within the energy and chemicals sector.
+          </p>
+        </div>
+        <a
+          className="flex items-center gap-2 px-6 py-2.5 bg-secondary text-on-secondary rounded-lg font-bold hover:brightness-110 active:scale-95 transition-all font-label text-sm"
+          href="/Farhan_Nur_Iman_Resume.pdf"
+          download="Farhan_Nur_Iman_Resume.pdf"
+        >
+          <Download className="w-4 h-4" />
+          <span>Download Resume PDF</span>
+        </a>
       </section>
 
       {/* Interactive Vertical Timeline */}

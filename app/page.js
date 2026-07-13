@@ -26,6 +26,7 @@ import {
   CheckCircle2,
   X,
   BookOpen,
+  Download,
 } from "lucide-react";
 
 export default function Home() {
@@ -215,7 +216,7 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                className="flex items-center gap-2 px-6 py-3 bg-secondary text-on-secondary rounded-lg font-bold hover:brightness-110 transition-all font-label text-sm"
+                className="flex items-center gap-2 px-6 py-3 bg-secondary text-on-secondary rounded-lg font-bold hover:brightness-110 active:scale-95 transition-all font-label text-sm"
                 href="https://linkedin.com/in/farhannuriman"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -224,13 +225,21 @@ export default function Home() {
                 <ExternalLink className="w-4 h-4" />
               </a>
               <a
-                className="flex items-center gap-2 px-6 py-3 bg-surface-container-high text-on-surface rounded-lg font-bold hover:bg-surface-container-highest transition-all font-label text-sm"
+                className="flex items-center gap-2 px-6 py-3 bg-surface-container-high text-on-surface rounded-lg font-bold hover:bg-surface-container-highest active:scale-95 transition-all font-label text-sm"
                 href="https://github.com/Zyrus02"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span>GitHub</span>
                 <Code2 className="w-4 h-4" />
+              </a>
+              <a
+                className="flex items-center gap-2 px-6 py-3 bg-surface-container-high text-on-surface rounded-lg font-bold hover:bg-surface-container-highest active:scale-95 transition-all font-label text-sm"
+                href="/Farhan_Nur_Iman_Resume.pdf"
+                download="Farhan_Nur_Iman_Resume.pdf"
+              >
+                <span>Download Resume</span>
+                <Download className="w-4 h-4" />
               </a>
               <a
                 className="flex items-center gap-2 px-6 py-3 bg-secondary text-on-secondary rounded-lg font-bold hover:brightness-110 transition-all font-label text-sm"

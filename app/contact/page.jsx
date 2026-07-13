@@ -62,7 +62,7 @@ export default function Contact() {
   const socials = [
     { name: "LinkedIn", url: "https://linkedin.com/in/farhannuriman", icon: ExternalLink },
     { name: "GitHub", url: "https://github.com/Zyrus02", icon: Code2 },
-    { name: "Instagram", url: "#", icon: Instagram },
+    { name: "Instagram", url: "#", icon: Camera },
     { name: "Unsplash", url: "#", icon: Camera }
   ];
 

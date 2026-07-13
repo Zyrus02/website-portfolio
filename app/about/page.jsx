@@ -43,28 +43,28 @@ export default function About() {
       role: "AI Development Capstone",
       desc: "Applied prompt engineering and Responsible AI frameworks to design enterprise-grade LLM interactions, and architected an AI-driven web platform during a 48-hour capstone sprint using Google Stitch, Manus, and Jotform.",
       icon: Sparkles,
-      period: "2024",
+      period: "2026",
     },
     {
       program: "CONVOFEST",
       role: "Business & Merchandise Committee",
       desc: "Coordinated artisan and vendor recruitment, generating RM100,000 in vendor-registration revenue, and directed merchandise operations driving an estimated RM30,000 in additional revenue.",
       icon: Coins,
-      period: "2023",
+      period: "2024",
     },
     {
       program: "Zoolander Venture (MPU4 Project)",
       role: "Head of Business",
       desc: "Led a team to organise three Car Boot fundraising events, raising ~RM5,000 in vendor registration and ensuring full compliance with university regulations.",
       icon: Compass,
-      period: "2023",
+      period: "2024",
     },
     {
       program: "STEMX",
       role: "Event Management & Media Committee",
       desc: "Facilitated 50 primary-school students in STEM outreach and led event media, banner, and photography deliverables.",
       icon: Cpu,
-      period: "2023",
+      period: "2024",
     },
   ];
 
@@ -105,14 +105,17 @@ export default function About() {
             <div>
               <span className="font-label text-xs uppercase tracking-widest text-secondary font-bold">Introduction</span>
               <h1 className="font-headline text-4xl md:text-5xl font-black text-on-surface mt-2">
-                About Farhan Nur Iman
+                About Me
               </h1>
             </div>
             <p className="font-body text-body-md text-on-surface-variant leading-relaxed text-justify">
-              Information Systems graduate (Big Data Analytics) with hands-on experience delivering business intelligence solutions across corporate marketing, sales, and engineering functions. Proven ability to process 1M+ records monthly and build Power BI dashboards serving 325+ users, translating complex datasets into actionable insights that support executive decision-making.
+              Farhan Nur Iman Bin Shamrulismawi | 24 Aug 2002 (24 years old)
             </p>
             <p className="font-body text-body-md text-on-surface-variant leading-relaxed text-justify">
-              Technically versatile across Power BI, DAX, Power Query, SQL, Python, and Tableau. Seeking a Junior Data Analyst or Business Analyst role where data-driven analysis directly informs business strategy and organisational performance.
+              Information Systems graduate (Big Data Analytics) with hands-on experience delivering business intelligence solutions across corporate marketing, sales, and engineering functions. Very passionate about data analytics, data visualisation, and software development. 
+            </p>
+            <p className="font-body text-body-md text-on-surface-variant leading-relaxed text-justify">
+              Technically versatile across Power BI, DAX, Power Query, SQL, Python, and Tableau. Seeking a Junior Data Analyst or Business Analyst role where data-driven analysis directly informs business strategy and organisational performance. Interested to transition into a Software Developer role with a focus on web development, UI/UX Designer and application development.
             </p>
           </div>
           <div className="bg-surface-container-low border border-outline-variant/30 rounded-2xl p-6 flex flex-col gap-6 relative overflow-hidden group">

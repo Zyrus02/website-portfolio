@@ -37,21 +37,20 @@ export default function Projects() {
       tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       span: "col-span-12 md:col-span-6 lg:col-span-4",
       link: "https://github.com/Zyrus02",
-      extra: "Currently under development: a new portfolio website built with Next.js, Tailwind CSS, and TypeScript.",
       extraIcon: "code"
     },
     {
       id: "child",
-      title: "Child Presence Detection",
-      desc: "Designed a child-presence detection concept aligned to the NCAP 2.0 requirement using radar sensors and an Aurix SoC to strengthen in-vehicle safety and minimise heatstroke risk.",
+      title: "Financial Tracker App",
+      desc: "Developed a front end financial tracker application with a React frontend and a Node.js backend, featuring real-time data visualization, and secure transaction management.",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAzmoaOq9sYZwFUvvkC9xTfeWDtwjhTkERXNzHTEEe2O4WYhBTc-XyYcCH_SSmB6VDB_GcVHiVH1I2-Kv8wVpjM25Gsn0vfpAgUFEe7_dPsYPJKJmJdSIiG3jAFcrLpxkMWEi4sv_7kDB-XXmsxb2M4Jlu91nVvx7FIffYYpK5GBfF4_nRgo5WeNqqQZsMlj9aQ4t89iZGLGSAsdg3izG3MskPMIFrnG9DDZhoz52b6qArKXrcFLdpo",
-      tags: ["C++", "Radar Sensors", "Aurix SoC"],
+      tags: ["React", "Node.js", "Express", "Tailwind CSS"],
       span: "col-span-12 lg:col-span-8",
       link: "https://github.com/Zyrus02",
       layout: "flex-col-reverse md:flex-row",
       buttons: [
-        { text: "Documentation", style: "primary" },
-        { icon: "terminal", style: "icon" }
+        { text: "Documentation", style: "primary", href: "https://github.com/Zyrus02" },
+        { icon: "terminal", style: "icon", href: "https://github.com/Zyrus02" }
       ]
     }
   ];
@@ -124,15 +123,21 @@ export default function Projects() {
                   <div className="flex items-center gap-4">
                     {proj.buttons.map((btn, idx) =>
                       btn.style === "primary" ? (
-                        <button
+                        <a
                           key={idx}
-                          className="px-6 py-2.5 bg-secondary text-on-secondary rounded-lg font-label text-xs font-semibold cursor-pointer hover:brightness-110 active:scale-95 transition-all"
+                          href={btn.href || "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-6 py-2.5 bg-secondary text-on-secondary rounded-lg font-label text-xs font-semibold cursor-pointer hover:brightness-110 active:scale-95 transition-all text-center inline-block"
                         >
                           {btn.text}
-                        </button>
+                        </a>
                       ) : (
-                        <button
+                        <a
                           key={idx}
+                          href={btn.href || "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="p-2 text-on-surface-variant hover:text-secondary hover:bg-surface-container rounded-full transition-colors cursor-pointer flex items-center justify-center"
                           aria-label={btn.icon}
                         >
@@ -140,7 +145,7 @@ export default function Projects() {
                             const Icon = IconMap[btn.icon];
                             return Icon ? <Icon className="w-5 h-5" /> : null;
                           })()}
-                        </button>
+                        </a>
                       )
                     )}
                   </div>
